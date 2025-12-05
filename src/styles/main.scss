@@ -1,4 +1,6 @@
+
 @use "./variables" as *;
+
 
 *,
 *::before,
@@ -20,7 +22,7 @@ body {
 .app-shell {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: .5rem;
 }
 
 .card {
@@ -28,7 +30,31 @@ body {
   border-radius: $radius-lg;
   box-shadow: $shadow-soft;
   padding: 1.5rem;
+  color: #1d1792;
+  border-color: #4f46e5;
+
+  button {
+  background-color: $color-accent;
+  color: rgb(60, 17, 109);
+  border: none;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  border-radius: $radius-lg;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  label {
+    color: $color-text-main;
+    font-size: 5rem;
+  }
+
+  &:hover {
+    background-color: darken($color-accent, 10%);
+  }
 }
+
+}
+ 
 
 .app-header {
   display: flex;
@@ -38,7 +64,7 @@ body {
 
   &__title {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   &__subtitle {
@@ -53,3 +79,4 @@ body {
   color: $color-text-muted;
   text-align: center;
 }
+

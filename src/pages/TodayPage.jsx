@@ -1,8 +1,12 @@
 import { useState } from "react";
 
+import { useWeather } from "../hooks/useWeather.js";
+import CurrentWeatherCard from "../components/layout/weather/CurrentWeatherCard.jsx";
 import SearchBar from "../components/layout/weather/SearchBar";
 import UnitsToggle from "../components/layout/weather/UnitsToggle";
 
+// Bootstrap imports
+import Spinner from 'react-bootstrap/Spinner';
 
 /**
  * Initial Today page.
@@ -10,37 +14,48 @@ import UnitsToggle from "../components/layout/weather/UnitsToggle";
  */
 
 function TodayPage() {
+  // Object deconstruction to get state and updater function
   const [city, setCiity] = useState("London");
   const [units, setUnits] = useState("metric");
 
+  // Call the hook similar to how we call the react hooks
+  const weatherState = useWeather (city, units);
+
   const handleSearch = (newCity) => {
     setCiity(newCity);
-    // Day 3: trigger API request here
+  
   };
 
   const handleUnitsChange = (newUnits) => {
     setUnits(newUnits);
-    // Day 3: re-fetch or convert data here
+  
   };
   return (
-    <section className="card">
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
+    <section>
+    <div className="card" style={{ marginBottom: "1rem"}}>
+      <div style={{ display: "flex", justifyContent: "space-between", gap: "1rem" }}>
         <SearchBar onSearch={handleSearch}/>
         <UnitsToggle units={units} onChange={handleUnitsChange}/> 
       </div>
       
-      <div style={{marginTop: "1rem"}}>
-         <h2>Today&apos;s weather for <span>{city} </span>
-         </h2>
+      <p style= {{marginTop: "0.75rem", fontSize: "0.9"}}>
+        Showing weather for <strong>{city}</strong> ({units} units).
+
+      </p>
          
-         <p>
-       Units: <strong>{units === "metric" ? "Metric (°C, km/h)" : "Imperial (°F, mph)"}</strong>
-      </p>
+     {weatherState.error && <p style={{color: "f97373"}}>{weatherState.error}</p>}
+     </div>
        
-      <p>
-        For now this is just mock text controlled by state. Tomrrow we will connect it to the Open_Meteo API.
-      </p>
-      </div>
+     {weatherState.loading ? (
+        <Spinner animation="border" />
+      ) : (
+        
+        <CurrentWeatherCard
+        current={weatherState.current}
+        location={weatherState.location}
+        units={units}
+        />
+      )}
     </section>
   );
 }
