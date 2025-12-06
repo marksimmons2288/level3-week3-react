@@ -17,9 +17,8 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## Day 2 - Small Homework
 - Add another piece of state: e.g. **lastUpdated** string and show it in the UI.
+
 - Create a very small **CurrentWeatherCard** component that recieves **temperature**, **description**, city as props and renders them (with mock values passed from **TodayPage**).
 
 ## Day 3 - Small Homework
 - Beatify the UI
-
-
