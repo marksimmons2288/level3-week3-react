@@ -13,10 +13,10 @@ function AppRouter() {
             <MainLayout>
                 <nav className="card" style={{marginBottom: "1rem"}}>
                     <NavLink to="/" end>
-                    Today
+                     <h2>Today Forecast</h2>
                     </NavLink>
-                    {" | "}
-                    <NavLink to ="/week">Week</NavLink>
+                    
+                    <NavLink to ="/week"> <h2>Week Forecast</h2></NavLink>
                     </nav>
 
                     {/* We Define the routes here */}

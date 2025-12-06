@@ -1,7 +1,9 @@
 import AppRouter from "./router/AppRouter";
 
 //We need to import the styles
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.scss";
+
 
 /**
  * Root application component.
