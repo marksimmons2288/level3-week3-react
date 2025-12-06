@@ -21,3 +21,5 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## Day 3 - Small Homework
 - Beatify the UI
+
+
