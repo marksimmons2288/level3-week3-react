@@ -1,11 +1,11 @@
-$color-bg: #4c518f;
-$color-surface: #788c98;
-$color-accent: #4f46e5;
-$color-accent-soft: rgba(14, 12, 85, 0.2);
-$color-text-main: #bac042;
-$color-text-muted: #838892;
+$color-bg: rgb(76 81 143);
+$color-surface: rgb(120 140 152);
+$color-accent: rgb(79 70 229);
+$color-accent-soft: rgb(14 12 85 / 20%);
+$color-text-main: rgb(186 192 66);
+$color-text-muted: rgb(131 136 146);
 
 $radius-lg: 1rem;
-$shadow-soft: 0 10px 30px rgba(193, 151, 151, 0.4);
+$shadow-soft: 0 10px 30px rgb(193 151 151 / 40%);
 
 $font-main: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", sans-serif;

@@ -32,15 +32,14 @@ body {
   box-shadow: $shadow-soft;
   padding: 1.5rem;
   color: #1d1792;
-  border-color: #4f46e5;
+  border: 1px solid #4f46e5;
 
   
 
   
 
-  button {
+ button {
   background-color: $color-accent;
-  color: rgb(60, 17, 109);
   border: none;
   padding: 0.5rem;
   margin-left: 1rem;
@@ -53,12 +52,9 @@ body {
     font-size: 5rem;
   }
 
-  &:hover {
-    background-color: darken($color-accent, 10%);
-  }
 }
 
-}
+
  
 
 .app-header {
@@ -84,4 +80,4 @@ body {
   color: $color-text-muted;
   text-align: center;
 }
-
+}
