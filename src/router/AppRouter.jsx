@@ -19,6 +19,8 @@ function AppRouter() {
                     <NavLink to ="/week"> <h2>Week Forecast</h2></NavLink>
                     </nav>
 
+                    
+
                     {/* We Define the routes here */}
                     <Routes>
                         <Route path="/" element={<TodayPage />} />
