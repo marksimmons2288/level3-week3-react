@@ -23,5 +23,5 @@ If you are developing a production application, we recommend using TypeScript wi
 ## Day 3 - Small Homework
 - Beatify the UI
 
-## Day 4 - Implement the HourlyForecastList
+## Day 4 - Implement the HourlyForecastList/ Deploy to git hub pages
 - Beautify the UI
