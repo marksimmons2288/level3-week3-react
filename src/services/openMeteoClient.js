@@ -18,7 +18,10 @@ export async function fetchTodayWeather(latitude, longitude, units) {
 
     // Request specific hourly data
     hourly: ["temperature_2m", "relativehumidity_2m", "apparent_temperature", "windspeed_10m"],
+    
+    // Request current weather
     current_weather: true,
+    
     // Request timezone and units
     timezone: "auto",
 
